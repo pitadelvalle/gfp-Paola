@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="secondary">
+      Inicio
+    </ion-title>
+    <ion-button (click)="OnLogout()" fill="clear" slot="end" color="secondary" size="large" shape="round">
+        <ion-icon md="md-log-out"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+  <hr color="white">  
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side ="top"> 
+      <ion-fab-button color="dark" [routerLink]="['/Edetails']" routerDirection="forward">
+          <ion-icon ios="ios-trending-down" md="md-trending-down" ></ion-icon>
+        </ion-fab-button>
+      <ion-fab-button color="light" [routerLink]="['/Idetails']" routerDirection="forward">
+        <ion-icon  ios="ios-trending-up" md="md-trending-up"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+  <ion-card>
+    <ion-card-content>
+      <canvas #doughnutCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-button fill="clear">
+        <ion-label color="light"> Total disponible</ion-label>
+    </ion-button>
+  </ion-item>
+  <hr>
+  <ion-item>
+    <ion-button fill="clear">
+        <ion-label color="light"> Ingresos </ion-label>
+    </ion-button>
+  </ion-item>
+  <hr>
+  <ion-item>
+    <ion-button fill="clear">
+      <ion-label color="light"> Egresos </ion-label>
+    </ion-button>
+  </ion-item>
+  <hr>
+</ion-content>
